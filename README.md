@@ -14,7 +14,7 @@ sudo apt update && sudo apt upgrade -y
 ```BASH
 # Add Docker's official GPG key:
 sudo apt-get update
-sudo apt-get install ca-certificates curl
+sudo apt-get install -y ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -29,9 +29,20 @@ sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 - install docker swarm
-  - sudo docker swarm init --advertise-addr 192.168.1.181 (1st control node)
+```BASH
+sudo docker swarm init --advertise-addr xxx.xxx.xxx.xxx
+```
+  - ensure you replace xxx.xxx.xxx.xxx with your control-01 ip aaddress
 - get control node connection string
-  - sudo docker swarm join-token manager
+```BASH
+sudo docker swarm join-token manager
+```
+- get worker node connection string
+```BASH
+sudo docker swarm join-token manager
+```
+
+## Connect all Control and Worker node
 - connect all control nodes and worker nodes
 - check
   - sudo docker node ls
