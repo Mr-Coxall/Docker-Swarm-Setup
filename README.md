@@ -48,4 +48,11 @@ sudo docker swarm join-token worker
 ```BASH
 sudo docker node ls
 ```
+
+## Install keepalived on all Control Nodes
+- on each control node, install keepalived
+```BASH
+sudo apt update
+sudo apt install -y libipset13 keepalived
+```
 - 
