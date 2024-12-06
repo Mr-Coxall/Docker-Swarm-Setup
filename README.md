@@ -45,5 +45,7 @@ sudo docker swarm join-token worker
 ## Connect all Control and Worker node
 - connect all control nodes and worker nodes
 - check
-  - sudo docker node ls
+```BASH
+sudo docker node ls
+```
 - 
