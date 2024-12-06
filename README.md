@@ -59,4 +59,32 @@ sudo apt install -y libipset13 keepalived
 ```BASH
 ip a
 ```
+- on each control node create a config file
+```BASH
+sudo nano /etc/keepalived/keepalived.conf
+```
+- place something like the following:
+```BASH
+vrrp_instance VIP_1 {
+  state MASTER
+  interface ens18
+  virtual_router_id 55
+  priority 150
+  advert_int 1
+  unicast_src_ip xxx.xxx.xxx.xxx
+  unicast_peer {
+    yyy.yyy.yyy.yyy
+    zzz.zzz.zzz.zzz
+  }
+
+  authentication {
+    auth_type PASS
+    auth_pass C3P9K9gc
+  }
+
+  virtual_ipaddress {
+    vvv.vvv.vvv.vvv/24
+  }
+}
+```
 - 
