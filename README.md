@@ -28,7 +28,7 @@ sudo apt-get update
 
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
-- install docker swarm
+- install docker swarm ONLY on control-1 to start with!
 ```BASH
 sudo docker swarm init --advertise-addr xxx.xxx.xxx.xxx
 ```
