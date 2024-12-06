@@ -63,7 +63,7 @@ ip a
 ```BASH
 sudo nano /etc/keepalived/keepalived.conf
 ```
-- place something like the following:
+- place something like the following for the control-1 node:
 ```BASH
 vrrp_instance VIP_1 {
   state MASTER
@@ -74,6 +74,30 @@ vrrp_instance VIP_1 {
   unicast_src_ip xxx.xxx.xxx.xxx
   unicast_peer {
     yyy.yyy.yyy.yyy
+    zzz.zzz.zzz.zzz
+  }
+
+  authentication {
+    auth_type PASS
+    auth_pass C3P9K9gc
+  }
+
+  virtual_ipaddress {
+    vvv.vvv.vvv.vvv/24
+  }
+}
+```
+- place something like the following for the control-2&3 node:
+```BASH
+vrrp_instance VIP_1 {
+  state BACKUP
+  interface ens18
+  virtual_router_id 55
+  priority 150
+  advert_int 1
+  unicast_src_ip yyy.yyy.yyy.yyy
+  unicast_peer {
+    xxx.xxx.xxx.xxx
     zzz.zzz.zzz.zzz
   }
 
