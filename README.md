@@ -2,8 +2,14 @@
 
 - install debian server
   - all with same SSH keys!
-- set static ip (nmtui)
+- set static ip
+```BASH
+sudo nmtui
+```
 - update && upgrade
+```BASH
+sudo apt update && sudo apt upgrade -y
+```
 - install docker
 ```BASH
 # Add Docker's official GPG key:
