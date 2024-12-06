@@ -55,4 +55,8 @@ sudo docker node ls
 sudo apt update
 sudo apt install -y libipset13 keepalived
 ```
+- get the interface for each of your control nodes
+```BASH
+ip a
+```
 - 
