@@ -39,7 +39,7 @@ sudo docker swarm join-token manager
 ```
 - get worker node connection string
 ```BASH
-sudo docker swarm join-token manager
+sudo docker swarm join-token worker
 ```
 
 ## Connect all Control and Worker node
