@@ -122,6 +122,7 @@ vrrp_instance VIP_1 {
 - start and enable the service
 ```BASH
 sudo systemctl stop keepalived.service
+sudo systemctl start keepalived.service
 ```
 - get the status
 ```BASH
