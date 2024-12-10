@@ -95,7 +95,7 @@ vrrp_instance VIP_1 {
   }
 }
 ```
-- place something like the following for the control-2&3 node:
+- place something like the following for the control-02&03 node:
 ```BASH
 vrrp_instance VIP_1 {
   state BACKUP
