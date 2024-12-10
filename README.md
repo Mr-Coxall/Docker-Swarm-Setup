@@ -71,7 +71,7 @@ ip a
 ```BASH
 sudo nano /etc/keepalived/keepalived.conf
 ```
-- place something like the following for the control-1 node:
+- place something like the following for the control-01 node:
 ```BASH
 vrrp_instance VIP_1 {
   state MASTER
