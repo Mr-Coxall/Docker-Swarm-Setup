@@ -101,7 +101,7 @@ vrrp_instance VIP_1 {
   state BACKUP
   interface ens18
   virtual_router_id 55
-  priority 150
+  priority 1xx
   advert_int 1
   unicast_src_ip yyy.yyy.yyy.yyy
   unicast_peer {
