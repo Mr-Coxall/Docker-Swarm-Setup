@@ -49,6 +49,14 @@ sudo docker swarm join-token worker
 sudo docker node ls
 ```
 
+## Drain Control Nodes
+- drain all control nodes, so only the worker nodes will get containers and control nodes only do control tasks
+```BASH
+sudo docker node update --availability drain control-01
+sudo docker node update --availability drain control-02
+sudo docker node update --availability drain control-03
+```
+
 ## Install keepalived on all Control Nodes
 - on each control node, install keepalived
 ```BASH
