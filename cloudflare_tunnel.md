@@ -7,3 +7,6 @@ sudo sysctl -w net.core.wmem_max=3000000
 sudo sysctl -w net.core.wmem_default=3000000
 
 sudo sysctl -a | grep net.core
+
+# In CloudFlare
+- if https service but a self signing certificate, then No TLS Verify set to true
